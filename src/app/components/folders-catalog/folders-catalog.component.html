@@ -1,0 +1,15 @@
+<div>
+  <div *ngFor="let folder of items; let i = index">
+    <app-node
+      [name]="folder.name"
+      [id]="folder._id"
+      [isType]="folder.isType"
+      [parentId]="folder.parentId"
+      (onDelete)="deleteNodeFromList($event, i)"
+    ></app-node>
+  </div>
+  <app-adding-new-nodes 
+    [parentId]="parentId"
+    (onAddNewNode)="addNewNode($event)"
+  ></app-adding-new-nodes>
+</div>

@@ -1,0 +1,41 @@
+<div class="folder-countainer" (onDrop)="test($event)" (onDrag)="test2($event)" droppable draggable>
+  <div [ngSwitch]="isType" class="folder-block">
+    <div *ngIf="isOpened">
+      <button
+        *ngSwitchCase="'folder'"
+        class="open-folder-btn"
+        (click)="openFolder(id)"
+      >
+        -
+      </button>
+    </div>
+    <div *ngIf="!isOpened">
+      <button
+        *ngSwitchCase="'folder'"
+        class="open-folder-btn"
+        (click)="openFolder(id)"
+      >
+        +
+      </button>
+    </div>
+    <img
+      *ngSwitchCase="'folder'"
+      src="../../../assets/folder.png"
+      alt=""
+      class="folder-img"
+    />
+    <img
+      *ngSwitchCase="'file'"
+      src="../../../assets/file.png"
+      alt=""
+      class="folder-img file-img"
+    />
+  </div>
+  <h1>{{ name }}</h1>
+  <button class="delete-node-btn" (click)="deleteNodeFromList()">X</button>
+</div>
+<div *ngIf="isOpened">
+  <div class="openedFolder">
+    <app-folders-catalog [parentId]="id"></app-folders-catalog>
+  </div>
+</div>

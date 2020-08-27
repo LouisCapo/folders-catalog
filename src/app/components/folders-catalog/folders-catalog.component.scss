@@ -1,0 +1,39 @@
+.folder-countainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: small;
+}
+
+.folder-img{
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+
+.open-folder-btn{
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+}
+
+.delete-node-btn{
+  background-color: red;
+  border-radius: 50%;
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  margin: 5px;
+}
+
+.file-img{
+  margin-left: 20px
+}
+
+.folder-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
